@@ -67,7 +67,7 @@ ol, ul {
 }
 
 .img-slider {
-	max-height: 900px;
+	height: 700px;
 	object-fit: cover;
 }
 
@@ -96,6 +96,10 @@ ol, ul {
 	transition: all 0.5s ease;
 }
 
+.card-img-top:hover{
+	cursor: pointer;
+}
+
 .card-title {
 	font-weight: bold;
 	font-size: 18px;
@@ -116,14 +120,15 @@ ol, ul {
 
 /***************** STORES  **********************/
 
-.social-name {
-	font-weight: bold;
+.store-text {
+	text-align: center
 }
 
 .store-img {
 	width: 570px;
 	height: 405px;
 	object-fit: cover;
+	border-radius: 5px
 }
 
 /***************** COLORS  **********************/
@@ -230,13 +235,96 @@ footer {
 	font-size: 14px;
 }
 
-.map {
-	height: 320px;
+.map .map-img {
+	height: auto;
+	width: 100%;
+}
+
+.map .map-img:hover {
+	cursor: pointer;
+}
+
+.social-name {
+	font-weight: bold;
+}
+
+/***************** MODAL  **********************/
+
+#img-modal {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#img-modal:hover {
+	opacity: 0.7;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
+  background-color: rgba(0,0,0,0.85); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+	max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+		transform: scale(0);
+	}
+  to {
+		transform: scale(1);
+	}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /***************** BREAKPOINTS  **********************/
 
-@media screen and (max-width : 1920px){
+@media screen and (max-width : 1920px) {
 	.only-mobile {
 		visibility:hidden;
 		padding-right: 30px;
@@ -251,7 +339,25 @@ footer {
 	}
 }
 
-@media screen and (max-width : 506px){
+@media screen and (max-width: 767px) {
+	.img-slider {
+		height: 300px;
+	}
+
+	.carousel-caption > h1 {
+		font-size: 28px
+	}
+
+	.store-text {
+		text-align: left
+	}
+
+	.modal-content {
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 506px) {
 	.only-mobile {
 		visibility:visible;
 		padding-right: 30px;
@@ -276,3 +382,4 @@ footer {
 		padding: 100px 50px;
 	}
 }
+

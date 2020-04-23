@@ -3,7 +3,6 @@ function brownieChicMap() {
 
   var lojas = [
     ['Bondi Beach', -3.741147, -38.471755],
-    ['Coogee Beach', -3.784980, -38.480496]
   ];
 
   var map = new google.maps.Map(document.getElementById('map'), {
