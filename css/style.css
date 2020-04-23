@@ -1,7 +1,12 @@
+/***************** RESET  **********************/
+
+
+/***************** GERAL  **********************/
+
 body {
 	/* font-family: 'Merienda';font-size: 15px; */
 	/* font-family: 'Dancing Script', cursive;  */
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Muli', 'Helvetica', sans-serif;
 	font-size: 14px;
 	background-position: 50% 50%;
 	background-repeat: repeat;
@@ -17,30 +22,12 @@ ol, ul {
 	padding: 0;
 }
 
-.tiny-font{
-	font-size: 14px;
-}
+/***************** HEADER  **********************/
 
-.nav-item{
+.nav-item {
 	padding-right: 12px;
 	padding-left: 12px;
 	font-size: 1.5em;
-}
-
-.flag{
-	max-height: 20px;
-	max-width: 20px;
-	margin-top: 10px;
-}
-
-.nav-link.active{
-	font-weight: bold;
-	color: #DC8C98 !important;
-}
-
-.logo-bc {
-	width: auto;
-	height: 4em
 }
 
 .navbar-brand {
@@ -59,11 +46,34 @@ ol, ul {
 	border-bottom: #DC8C98 solid 2px;
 }
 
-.reserve-container{
-	position: relative;
+.nav-link.active {
+	font-weight: bold;
+	color: #DC8C98 !important;
 }
 
-.card-body{
+.logo-bc {
+	width: auto;
+	height: 4em
+}
+
+/***************** CAROUSEL  **********************/
+
+.carousel-caption {
+	top: 40%;
+}
+
+.carousel {
+	padding-top: 50px;
+}
+
+.img-slider {
+	max-height: 900px;
+	object-fit: cover;
+}
+
+/***************** MENU  **********************/
+
+.card-body {
 	-webkit-transition: all 1s ease; /* Safari and Chrome */
   	-moz-transition: all 1s ease; /* Firefox */
   	-o-transition: all 1s ease; /* IE 9 */
@@ -72,7 +82,7 @@ ol, ul {
 	background-color: transparent
 }
 
-.card-body:hover{
+.card-body:hover {
 	-webkit-transform: scale(1.05);
 	-moz-transform: scale(1.05);
 	-o-transform: scale(1.05);
@@ -80,28 +90,108 @@ ol, ul {
 	transform: scale(1.05);
 }
 
-.card-img-top{
+.card-img-top {
+	object-fit: cover;
 	height: 200px;
+	transition: all 0.5s ease;
 }
 
-.carousel-caption{
-	top: 40%;
-}
-.carousel {
-	padding-top: 50px;
+.card-title {
+	font-weight: bold;
+	font-size: 18px;
 }
 
-.img-slider{
-	min-height: 320px;
+.card-subtitle {
+	font-weight: 500;
+	font-size: 15px;
 }
 
-.navMenu{
+
+/***************** ABOUT  **********************/
+
+.navMenu {
 	padding-top: 75px;
 	padding-bottom: 20px;
 }
 
-.map{
-	height: 320px;
+/***************** STORES  **********************/
+
+.social-name {
+	font-weight: bold;
+}
+
+.store-img {
+	width: 570px;
+	height: 405px;
+	object-fit: cover;
+}
+
+/***************** COLORS  **********************/
+
+.gray {
+	color: #565656;
+}
+
+.light-gray {
+	color: #666666;
+}
+
+/***************** PARALLAX  **********************/
+
+.parallax { 
+    /* The image used */
+	background-image: url("../images/brigadeiro_gourmet_1.jpg");
+	margin: 50px 0;
+	position: relative;
+
+	/* Set a specific height */
+	height: 500px; 
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.parallax > .parallax-text {
+	display: inline-block;
+	text-align: center;
+	padding: 200px 50px;
+	width: 100%;
+}
+
+.parallax .parallax-title {
+	color: #565656;
+}
+
+.parallax .parallax-paragraph {
+	color: #565656;
+}
+
+/***************** FOOTER  **********************/
+
+.copyright {
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+ 	background-color: #FEDCD2; 
+	/* background-color: #EDD7DA;  */
+	position: relative;
+}
+
+.footer {
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 100;
+ 	background-color: #FEDCD2; 
+	position: relative;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+	padding-top: 20px;
 }
 
 .footer-col-social a {
@@ -136,100 +226,38 @@ ol, ul {
 	cursor: pointer;
 }
 
-.social-name {
-	font-weight: bold;
+.tiny-font {
+	font-size: 14px;
 }
 
-/***************** COLORS  **********************/
-
-.gray {
-	color: #565656;
-}
-
-.light-gray {
-	color: #666666;
-}
-
-/***************** PARALLAX  **********************/
-
-.parallax { 
-    /* The image used */
-	background-image: url("../images/parallax2.jpg");
-	margin: 50px 0;
-	position: relative;
-
-    /* Set a specific height */
-    height: 500px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax > .parallax-text {
-	display: inline-block;
-	text-align: center;
-	padding: 200px 50px;
-	width: 100%;
-	color: white;
-}
-
-.parallax .parallax-title {
-	color: white;
-}
-
-.parallax .parallax-paragraph {
-	color: white;
-}
-
-/***************** FOOTER  **********************/
-
-.copyright {
-	margin: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
- 	background-color: #FEDCD2; 
-	/* background-color: #EDD7DA;  */
-	position: relative;
-}
-
-.footer {
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 100;
- 	background-color: #FEDCD2; 
-	position: relative;
-}
-
-footer {
-	position: fixed;
-	bottom: 0px;
-	padding-top: 20px;
+.map {
+	height: 320px;
 }
 
 /***************** BREAKPOINTS  **********************/
 
 @media screen and (max-width : 1920px){
-  	.only-mobile{
+	.only-mobile {
 		visibility:hidden;
 		padding-right: 30px;
 	}
-	hr{
+
+	hr {
 		visibility:hidden;
 	}
+
 	.footer {
 		padding: 20px;
 	}
 }
 
 @media screen and (max-width : 506px){
-  	.only-mobile{
+	.only-mobile {
 		visibility:visible;
 		padding-right: 30px;
- 	}
- 	hr{
+	 }
+	 
+ 	hr {
 		visibility:visible;
 	}
 
