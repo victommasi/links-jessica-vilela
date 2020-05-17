@@ -73,13 +73,20 @@ ol, ul {
 
 /***************** MENU  **********************/
 
+.card {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
 .card-body {
 	-webkit-transition: all 1s ease; /* Safari and Chrome */
   	-moz-transition: all 1s ease; /* Firefox */
   	-o-transition: all 1s ease; /* IE 9 */
   	-ms-transition: all 1s ease; /* Opera */
 	transition: all 1s ease;
-	background-color: transparent
+	background-color: transparent;
+	height: 120px;
+	padding: 10px;
 }
 
 .card-body:hover {
