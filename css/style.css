@@ -63,11 +63,33 @@ ol, ul {
 }
 
 .carousel {
-	padding-top: 50px;
+	padding-top: 64px;
+}
+
+/* .carousel::after{
+	content: ""; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(90deg, #000, #000);
+	opacity: 0;
+	z-index: 1;
+} */
+
+.carousel-control-prev {
+	left: 0;
+	z-index: 2;
+}
+
+.carousel-control-next {
+	right: 0;
+	z-index: 2;
 }
 
 .img-slider {
-	height: 850px;
+	height: 800px;
 	object-fit: cover;
 }
 
@@ -166,6 +188,18 @@ ol, ul {
 	background-size: cover;
 }
 
+.parallax::after{
+	content: ""; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(90deg, #000, #000);
+	opacity: 0.15;
+	z-index: 1;
+}
+
 .parallax > .parallax-text {
 	display: inline-block;
 	text-align: center;
@@ -174,8 +208,8 @@ ol, ul {
 }
 
 .parallax .parallax-title {
-	color: #565656;
-	text-shadow: 1px 1px #444;
+	color: #fff;
+	text-shadow: 1px 1px #000;
 }
 
 .parallax .parallax-paragraph {
@@ -347,7 +381,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
 	.img-slider {
 		height: 300px;
 	}
