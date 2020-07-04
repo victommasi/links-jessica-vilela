@@ -5,8 +5,17 @@
 
     if (regex.test(email)) {
       $('#modalEbook').modal('hide');
-      $('#ebook-download-target').click();
-      downloadFile()
+
+      const data = { email }
+
+      $.ajax({
+        url: 'https://us-central1-links-1c9cc.cloudfunctions.net/addLead',
+        dataType: 'json',
+        contentType: "application/json",
+        type: 'POST',
+        data: JSON.stringify(data),
+        success: downloadFile,
+      });
     } else {  
       $('#alert-validation').fadeIn()
     } 
