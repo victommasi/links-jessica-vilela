@@ -11,14 +11,13 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- <meta name="description" content="Com massa caseira e irresistível, tudo é produzido com amor e cuidado para chegar até você. Sabor único e inconfundível. Venha nos conhecer e jamais esquecer!"> -->
+		<meta name="description" content="Nutricionista Jéssica Vilela - Fortaleza CE">
 		<!-- <meta name="google-site-verification" content="amBGfJMHU2f2l822EmgG7-zWNSX0b1tuCY2h48V5PiY" /> -->
 		<!-- <meta name="keywords" content="browniechic, brownie, chic, fortaleza, doces, doceria, browneria, sorvete"> -->
 		<meta name="author" content="Victor Tommasi">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<!-- <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"> -->
 		<title> Jéssica Vilela </title>
 		<link rel="icon" href="images/logo.jpg">
 	</head>
@@ -43,7 +42,7 @@
 					</li>
 					<li>
 						<div>
-							<a href="images/ebook-2.png" download>
+							<a id="ebook-download" href="" data-toggle="modal" data-target="#modalEbook">
 								<img src="images/ebook-2.png" alt="Ebook" title="Imagem Ebook"/>
 							</a>
 						</div>
@@ -61,17 +60,36 @@
 			</div>
 		</main>
 
+		<!-- Modal -->
+		<div class="modal fade" id="modalEbook" tabindex="-1" role="dialog" aria-labelledby="modalEbookLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalEbookLabel"> Digite seu email</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="email-form">
+							<input id="input-email" type="email" required>
+							<span id="alert-validation" class="input-error"> Digite um e-mail válido</span>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button id="submit-email" type="button" class="btn btn-primary">Enviar</button>
+					</div>
+				</div>
+			</div>
+</div>
+
 		<footer>
 			<p> Desenvolvido por <a href="https://www.linkedin.com/in/victortommasi"> Victor Tommasi </a></p>
 		</footer>
 
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+		<script src="js/script.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-		<!-- <script type="text/javascript" src="js/smooth-scroll.js"></script> -->
-		<!-- <script type="text/javascript" src="js/zoom.js"></script> -->
-		<!-- <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
-		<!-- <script type="text/javascript" src="js/image-effect.js"></script> -->
 	</body>
 </html>
