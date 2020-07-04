@@ -1,12 +1,13 @@
 (function(){
-  $('#submit-email').click((e) => {
+  $('#submit-email').click(() => {
     const email = $('#input-email').val();
+    const name = $('#input-name').val();
     let regex = new RegExp(/^[a-z0-9\.\-\_]+@[a-z0-9]+[-]*[a-z0-9]*\.[a-z]+(\.[a-z]+)?$/gm);
 
     if (regex.test(email)) {
       $('#modalEbook').modal('hide');
 
-      const data = { email }
+      const data = { name, email }
 
       $.ajax({
         url: 'https://us-central1-links-1c9cc.cloudfunctions.net/addLead',
@@ -35,5 +36,6 @@
   $('#modalEbook').on('hide.bs.modal', () => {
     $('#alert-validation').fadeOut()
     $('#input-email').val('')
+    $('#input-name').val('')
   })
 }());

@@ -65,19 +65,24 @@
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="modalEbookLabel"> Digite seu email</h5>
+						<h6 class="modal-title" id="modalEbookLabel"> Preencha os campos</h6>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<div class="modal-body">
-						<form id="email-form">
-							<input id="input-email" type="email" required>
-							<span id="alert-validation" class="input-error"> Digite um e-mail válido</span>
+						<form id="lead-form">
+							<div class="form-group">
+								<input type="text" class="form-control" id="input-name" placeholder="Seu nome">
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" id="input-email" placeholder="Seu e-mail">
+								<span id="alert-validation" class="input-error"> Digite um e-mail válido</span>
+							</div>
+							<button id="submit-email" type="button" class="btn btn-primary">Download</button>
 						</form>
 					</div>
 					<div class="modal-footer">
-						<button id="submit-email" type="button" class="btn btn-primary">Enviar</button>
 					</div>
 				</div>
 			</div>
