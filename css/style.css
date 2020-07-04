@@ -4,13 +4,11 @@
 /***************** GERAL  **********************/
 
 body {
-	/* font-family: 'Merienda';font-size: 15px; */
-	/* font-family: 'Dancing Script', cursive;  */
 	font-family: 'Muli', 'Helvetica', sans-serif;
 	font-size: 14px;
 	background-position: 50% 50%;
 	background-repeat: repeat;
-	background-color: #fff2f4;
+  background: linear-gradient(-45deg, #caffea, #fff);
 }
 
 a {
@@ -20,349 +18,99 @@ a {
 ol, ul {
 	list-style: none;
 	padding: 0;
+	margin-bottom: 0;
+}
+
+p {
+	margin: 0;
 }
 
 /***************** HEADER  **********************/
 
-.nav-item {
-	padding-right: 12px;
-	padding-left: 12px;
-	font-size: 1.5em;
-}
-
-.navbar-brand {
-	transform: translateX(-50%);
-	left: 50%;
-	position: absolute;
-	margin: 0px;
-	padding: 1.6em 0 0 0;
-}
-
-.navbar {
-	/* background-color: #f8c2ca; */
-	/*background-color: #DC8C98;*/
-	position: absolute;
-	background-color: #FFF;
-	border-bottom: #DC8C98 solid 2px;
-}
-
-.nav-link.active {
-	font-weight: bold;
-	color: #DC8C98 !important;
-}
-
-.logo-bc {
-	width: auto;
-	height: 4em
-}
-
-/***************** CAROUSEL  **********************/
-
-.carousel-caption {
-	top: 40%;
-}
-
-.carousel {
-	padding-top: 56px;
-}
-
-/* .carousel::after{
-	content: ""; 
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: linear-gradient(90deg, #000, #000);
-	opacity: 0;
-	z-index: 1;
-} */
-
-.carousel-control-prev {
-	left: 0;
-	z-index: 2;
-}
-
-.carousel-control-next {
-	right: 0;
-	z-index: 2;
-}
-
-.img-slider {
-	height: 800px;
-	object-fit: cover;
-}
-
-/***************** MENU  **********************/
-
-.card {
-	margin-bottom: 10px;
-	border-radius: 5px;
-}
-
-.card-body {
-	-webkit-transition: all 1s ease; /* Safari and Chrome */
-  	-moz-transition: all 1s ease; /* Firefox */
-  	-o-transition: all 1s ease; /* IE 9 */
-  	-ms-transition: all 1s ease; /* Opera */
-	transition: all 1s ease;
-	background-color: transparent;
-	height: 120px;
-	padding: 10px;
-}
-
-.card-body:hover {
-	-webkit-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-	-o-transform: scale(1.05);
-	-ms-transform: scale(1.05);
-	transform: scale(1.05);
-}
-
-.card-img-top {
-	object-fit: cover;
-	height: 200px;
-	transition: all 0.5s ease;
-}
-
-.card-img-top:hover{
-	cursor: pointer;
-}
-
-.card-title {
-	font-weight: bold;
-	font-size: 18px;
-}
-
-.card-subtitle {
-	font-weight: 500;
-	font-size: 15px;
-}
-
-
-/***************** ABOUT  **********************/
-
-.navMenu {
-	padding-top: 75px;
-	padding-bottom: 20px;
-}
-
-/***************** STORES  **********************/
-
-.store-text {
-	text-align: center
-}
-
-.store-img {
-	width: 570px;
-	height: 405px;
-	object-fit: cover;
-	border-radius: 5px
-}
-
-/***************** COLORS  **********************/
-
-.gray {
-	color: #565656;
-}
-
-.light-gray {
-	color: #666666;
-}
-
-/***************** PARALLAX  **********************/
-
-.parallax { 
-    /* The image used */
-	background-image: url("../images/brigadeiro_gourmet_1.jpg");
-	margin: 50px 0;
+header {
 	position: relative;
-
-	/* Set a specific height */
-	height: 500px; 
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0;
+	padding: 15px
 }
 
-.parallax::after{
-	content: ""; 
-	position: absolute;
-	top: 0;
-	left: 0;
+header > div {
+	width: 150px;
+	height: 150px;
+	background: #fff;
+	object-fit: cover;
+	border-radius: 50%;
+  box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.3)
+}
+
+header img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+
+/***************** MAIN  **********************/
+
+main > .grid-container {
+	margin: 20px;
+}
+
+main ul {
+	display: grid;
+	gap: 25px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+main li > div {
+	justify-self: center;
+	align-self: center;
+	border-radius: 20px;
+	box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.3);
+	padding: 15px;
+	background: #fff;
+	width: 110px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+main li > p {
+	text-align: center;
+	margin-top: 5px;
+	font-size: 13px;
+}
+
+main li  a {
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(90deg, #000, #000);
-	opacity: 0.15;
-	z-index: 1;
 }
 
-.parallax > .parallax-text {
-	display: inline-block;
-	text-align: center;
-	padding: 200px 50px;
-	width: 100%;
+main li img {
+	border-radius: 25px;
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
 }
 
-.parallax .parallax-title {
-	color: #fff;
-	text-shadow: 1px 1px #000;
-}
-
-.parallax .parallax-paragraph {
-	color: #565656;
-}
 
 /***************** FOOTER  **********************/
 
-.copyright {
-	margin: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
- 	background-color: #FEDCD2; 
-	/* background-color: #EDD7DA;  */
-	position: relative;
-}
-
-.footer {
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 100;
- 	background-color: #FEDCD2; 
-	position: relative;
-}
-
 footer {
 	position: fixed;
-	bottom: 0px;
-	padding-top: 20px;
-}
-
-.footer-col-social a {
-	color: #565656;
-	position: relative;
-}
-
-.footer-col-social li .icon  {
-	background: #333;
-	font-size: 20px;
-	padding: 5px;
-	margin: 2.5px 0px;
-	height: 40px;
-	width: 40px;
-	text-align: center;
-	-webkit-border-radius: 50px; 
-	border-radius: 50px;
-	color: white;
-}
-
-.footer-col-social li:hover  {
-	color: #DC8C98;
-}
-
-.footer-col-social li .social-name {
-	position: absolute;
-	left: 50px;
-	top: -10px;
-}
-
-.footer-col-social li .social-name:hover {
-	cursor: pointer;
-}
-
-.tiny-font {
-	font-size: 14px;
-}
-
-.map .map-img {
-	height: auto;
+	left: 0;
+	bottom: 0;
+	padding: 15px;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.map .map-img:hover {
-	cursor: pointer;
-}
-
-.social-name {
+footer a {
 	font-weight: bold;
 }
 
-/***************** MODAL  **********************/
-
-#img-modal {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#img-modal:hover {
-	opacity: 0.7;
-}
-
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: hidden; 
-  background-color: rgba(0,0,0,0.85); 
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-	max-width: 700px;
-}
-
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-		transform: scale(0);
-	}
-  to {
-		transform: scale(1);
-	}
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /***************** BREAKPOINTS  **********************/
 
