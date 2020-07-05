@@ -22,7 +22,7 @@
 
   const downloadFile = () => {
     $('#modalEbook').modal('hide');
-    var file_path = 'files/livrodereceitas.pdf';
+    var file_path = 'files/livrodereceitas-2.pdf';
     var a = document.createElement('a');
     a.href = file_path;
     a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
