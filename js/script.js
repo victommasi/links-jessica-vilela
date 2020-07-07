@@ -22,7 +22,7 @@
 
   const downloadFile = () => {
     $('#modalEbook').modal('hide');
-    var file_path = 'files/livro_de_receitas_jessica_vilela.pdf';
+    var file_path = 'files/receitas_lanches_sobremesas_jessica_vilela.pdf';
     var a = document.createElement('a');
     a.href = file_path;
     a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
