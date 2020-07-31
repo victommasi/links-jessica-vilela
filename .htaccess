@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www.browniechic.com.br [NC]
-RewriteRule (.*) https://browniechic.com.br/$1 [L,R=301]

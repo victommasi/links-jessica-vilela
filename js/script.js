@@ -12,17 +12,30 @@
         contentType: "application/json",
         type: 'POST',
         data: JSON.stringify({ name, email }),
-        success: downloadFile,
+        success: downloadEbook,
       });
     } else {  
       $('#alert-validation').fadeIn()
     } 
-
   })
 
-  const downloadFile = () => {
+  $('#planer-download').click(() => {
+    downloadPlanner();
+  })
+
+  const downloadEbook = () => {
     $('#modalEbook').modal('hide');
     var file_path = 'files/receitas_lanches_sobremesas_jessica_vilela.pdf';
+    var a = document.createElement('a');
+    a.href = file_path;
+    a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  const downloadPlanner = () => {
+    var file_path = 'files/diario_alimentar_mensal_jessica_vilela.pdf';
     var a = document.createElement('a');
     a.href = file_path;
     a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
