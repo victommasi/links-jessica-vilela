@@ -19,9 +19,9 @@
     } 
   })
 
-  $('#planer-download').click(() => {
-    downloadPlanner();
-  })
+  // $('#planer-download').click(() => {
+  //   // downloadPlanner();
+  // })
 
   const downloadEbook = () => {
     $('#modalEbook').modal('hide');
@@ -34,15 +34,15 @@
     document.body.removeChild(a);
   }
 
-  const downloadPlanner = () => {
-    var file_path = 'files/diario_alimentar_mensal_jessica_vilela.pdf';
-    var a = document.createElement('a');
-    a.href = file_path;
-    a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  // const downloadPlanner = () => {
+  //   var file_path = 'files/diario_alimentar_mensal_jessica_vilela.pdf';
+  //   var a = document.createElement('a');
+  //   a.href = file_path;
+  //   a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
+  //   document.body.appendChild(a);
+  //   a.click();
+  //   document.body.removeChild(a);
+  // }
 
   $('#modalEbook').on('hide.bs.modal', () => {
     $('#alert-validation').fadeOut()
