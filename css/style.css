@@ -76,9 +76,10 @@ main li > p {
 	text-align: center;
 	margin-top: 5px;
 	font-size: 13px;
+line-height: normal;
 }
 
-main li  a {
+main li a {
 	width: 100%;
 	height: 100%;
 }
